@@ -1,1 +1,1 @@
-My 3d modelss for 3d printing
+My 3d models for 3d printing
