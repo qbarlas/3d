@@ -1,24 +1,13 @@
 module keybase() {
 	difference() {
     cube(size = [18, 18 ,3]);
-		translate([1,1,0]) 
-			cube(size = [16,16,1]);
-		translate([-1,18,0])
-			rotate([20,0,0])
-				cube(size=[19,5,5]);
-		translate([-1,0,0])
-			rotate([60,0,0])
-				cube(size=[19,5,5]);
-		translate([-4.5,0,1])
-			rotate([0,20,0])
-				cube(size=[5,19,5]);
-		translate([18,0,0])
-			rotate([0,-20,0])
-				cube(size=[5,19,5]);
+		translate([1,1.5,0]) cube(size = [16, 15.5 ,1]);
+		rotate([60,0,0]) cube([18,5,3]);
+		translate([0,18,0])
+			rotate([30,0,0]) cube([18,3,5]);
 	}
 }
 module character(c) {
-    echo("key for char ", c);
     translate([4,8,2.2]) {
         linear_extrude(height = 0.8) {
             text(c,size=6);
@@ -53,7 +42,7 @@ module hooks(){
 module keycap(c){
    difference() {
        keybase();
-       character(c);
+       *character(c);
    }
 	 hooks();
 }
