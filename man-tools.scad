@@ -2,8 +2,8 @@
 
 $fn=32;
 rotate([88.5,0,0])
-scale(.7)
-{
+
+
 translate([0,5,-12])
 union(){
 	hull(){
@@ -28,5 +28,4 @@ union(){
 	translate([0,0,26])
 		sphere(5.5);
 	}
-}
 }
